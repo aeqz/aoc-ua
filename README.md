@@ -14,3 +14,13 @@ Requires having a `.session` file in the current directory with your Advent of C
 ```sh
 ./scripts/inputs.ua [year]
 ```
+
+## Run solutions
+
+```sh
+# To interactively see outputs after saving a file while solving puzzles
+uiua watch
+
+# To record outputs for a year
+uiua run [year].ua > [year].out
+```
