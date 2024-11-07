@@ -12,18 +12,18 @@ SessionCookie ← ⍣(
   &exit 1 0
 )
 
-Timezone ← ¯5
-InputsDir ← $$ inputs/_/
-Response ← $"_\r\n\r\n_"
+Timezone      ← ¯5
+InputsDir     ← $$ inputs/_/
+Response      ← $"_\r\n\r\n_"
 InputFilePath ← $$ _/_.in
-Host ← $$ adventofcode.com
-Request ← $$ GET /_/day/_/input HTTP/1.1
-          $$ Host: _
-          $$ Accept: text/html
-          $$ Cookie: session=_
-          $$ Connection: close
-          $$ 
-          $$ 
+Host          ← $$ adventofcode.com
+Request       ← $$ GET /_/day/_/input HTTP/1.1
+                $$ Host: _
+                $$ Accept: text/html
+                $$ Cookie: session=_
+                $$ Connection: close
+                $$ 
+                $$ 
 
 FetchDay ← ⍜(
   &tlsc $"_:443"Host
@@ -35,8 +35,7 @@ FetchDay ← ⍜(
 )
 
 datetime +×3600 Timezone now
-⍣(
-  °1>Year ⊡0
+⍣(°1>Year ⊡0
   +1 ⇡25
 | °1=12 ⊸⊡1 °1=Year ⊸⊡0
   +1 ⇡↧25 ⊡2

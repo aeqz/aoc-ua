@@ -9,8 +9,7 @@ Year ↚ ⍣(
 
 Day ← (
   &p ⊸$"\nDay _"
-  ⍣(
-    &fras $"inputs/_/_.in" Year
+  ⍣(&fras $"inputs/_/_.in" Year
   | &p ⋅$$ _
     &p $"You may need to run the inputs script for year _" Year
     &exit 1 0

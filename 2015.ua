@@ -43,20 +43,20 @@ Part 2 /+ ≡(
 )
 
 Day 6
-Toggle ← $$ toggle _,_ through _,_
-TurnOn ← $$ turn on _,_ through _,_
+Toggle  ← $$ toggle _,_ through _,_
+TurnOn  ← $$ turn on _,_ through _,_
 TurnOff ← $$ turn off _,_ through _,_
 Share ≡([⊙∩∩⋕] ⍣(0°Toggle|1°TurnOn|2°TurnOff)) Lines
 InstructionTarget ← ☇1 ⊞⊂ ⊃(+ ⇡ +1 - ⊃(⊡1|⊡3|⊡1)|+ ⇡ +1 - ⊃(⊡2|⊡4|⊡2))
-MakeLights! ← ∧(⍜⊡(^0:) ⊃(⊙⋅∘|⋅⊙◌) ⊃InstructionTarget⊢) : ↯1000_1000 0
+MakeLights!       ← ∧(⍜⊡(^0:) ⊃(⊙⋅∘|⋅⊙◌) ⊃InstructionTarget⊢) : ↯1000_1000 0
 Part 1 /+ ♭ MakeLights!⨬(◿2 +1|↧1 +1|×0)
 Part 2 /+ ♭ MakeLights!⨬(+2|+1|↥0 -1)
 
 Day 7
-Bind ← $$ _ -> _
-Not ← $$ NOT _
-Or ← $$ _ OR _
-And ← $$ _ AND _
+Bind   ← $$ _ -> _
+Not    ← $$ NOT _
+Or     ← $$ _ OR _
+And    ← $$ _ AND _
 LShift ← $$ _ LSHIFT _
 RShift ← $$ _ RSHIFT _
 Share ≡(
@@ -69,13 +69,12 @@ Share ≡(
   | 5{∘}
   ) °Bind
 ) Lines
-NoValue ← $$ No value
-Value ← ⍣(⊙◌ ⋕|°□ ⊡[⊙1] ⊗ □ ⊙⊸≡⊢|⍤NoValue 0⋅⋅0)
-Unary ← Value °{∘}
-Binary ← ∩Value ⊃(⊙⋅∘|⋅⊙∘) °{⊙∘}
+NoValue        ← $$ No value
+Value          ← ⍣(⊙◌ ⋕|°□ ⊡[⊙1] ⊗ □ ⊙⊸≡⊢|⍤NoValue 0⋅⋅0)
+Unary          ← Value °{∘}
+Binary         ← ∩Value ⊃(⊙⋅∘|⋅⊙∘) °{⊙∘}
 WireOutput ← ⊃⋅⋅⊙◌(
-  ⨬(
-    -:65535 Unary
+  ⨬(-:65535 Unary
   | °⋯ ↧1 +∩(⬚0↙16 ⋯) Binary
   | °⋯ ×∩(⬚0↙16 ⋯) Binary
   | ⍜⋯(⬚0↙16 ⊂×0⇡:) Binary
@@ -95,7 +94,7 @@ Part 2 Value"a" CircuitOutputs [{"b" ∘}]
 
 Day 8
 Share Lines
-StringLiteral ← $$ "_"
+StringLiteral      ← $$ "_"
 CharactersInMemory ← °0 ∧⍣(
   ⨬(1|0 +1) °@\\
 | ⨬(0 +1|2) °@x
