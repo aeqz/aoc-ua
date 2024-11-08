@@ -43,9 +43,11 @@ datetime +×3600 Timezone now
   &exit 1 0 ◌
 )
 
-&runc{"mkdir" "-p" ∘} InputsDir Year
-⊃(⋅⊙◌|=0⊙⋅◌)
-⍤$$ Could not create the inputs directory: _
+InputsDir Year
+⍣(&fmd
+| &p $$ Could not create the inputs directory: _
+  &exit 1
+)
 
 ▽⊸≡(¬&fe InputFilePath InputsDir Year)
 ∧FetchDay
