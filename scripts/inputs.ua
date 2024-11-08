@@ -12,6 +12,7 @@ SessionCookie ← ⍣(
   &exit 1 0
 )
 
+Timezone ← ¯5
 InputsDir ← $$ inputs/_/
 Response ← $"_\r\n\r\n_"
 InputFilePath ← $$ _/_.in
@@ -33,7 +34,7 @@ FetchDay ← ⍜(
   &fwa InputFilePath InputsDir Year :
 )
 
-datetime now
+datetime +×3600 Timezone now
 ⍣(
   °1>Year ⊡0
   +1 ⇡25
