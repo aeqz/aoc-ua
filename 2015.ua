@@ -47,7 +47,7 @@ Toggle  ← $$ toggle _,_ through _,_
 TurnOn  ← $$ turn on _,_ through _,_
 TurnOff ← $$ turn off _,_ through _,_
 Share ≡([⊙∩∩⋕] ⍣(0°Toggle|1°TurnOn|2°TurnOff)) Lines
-InstructionTarget ← ☇1 ⊞⊂ ⊃(+ ⇡ +1 - ⊃(⊡1|⊡3|⊡1)|+ ⇡ +1 - ⊃(⊡2|⊡4|⊡2))
+InstructionTarget ← ☇1 ⊞⊂ ⊃(⍜-⇡ ⊃(⊡1|+ 1 ⊡3)|⍜-⇡ ⊃(⊡2|+ 1 ⊡4))
 MakeLights!       ← ∧(⍜⊡(^0:) ⊃(⊙⋅∘|⋅⊙◌) ⊃InstructionTarget⊢) : ↯1000_1000 0
 Part 1 /+ ♭ MakeLights!⨬(◿2 +1|↧1 +1|×0)
 Part 2 /+ ♭ MakeLights!⨬(+2|+1|↥0 -1)
