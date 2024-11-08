@@ -3,9 +3,8 @@
 Some Advent of Code solutions implemented with [Uiua](https://www.uiua.org/).
 
 > [!IMPORTANT]  
-> Uiua is not yet stable. This code is compatible with version `0.12.3`.
+> Uiua is not yet stable. This code is compatible with version `0.13.0`.
 > It also makes use of some external commands that are not yet available in Uiua:
->   * `mkdir` (will be [added](https://www.uiua.org/docs/&fmd) on `0.13.0`)
 >   * `md5`
 
 ## Download your input files
