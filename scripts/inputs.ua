@@ -14,7 +14,8 @@ SessionCookie ← ⍣(
 
 Timezone      ← ¯5
 InputsDir     ← $$ inputs/_/
-Response      ← $"_\r\n\r\n_"
+Response      ← $"HTTP/1.1 200 OK\r\n_\r\n\r\n_"
+BadResponse   ← $"HTTP/1.1 _\r\n_"
 InputFilePath ← $$ _/_.in
 Host          ← $$ adventofcode.com
 Request       ← $$ GET /_/day/_/input HTTP/1.1
@@ -30,7 +31,12 @@ FetchDay ← ⍜(
 | ⊃(⋅∘|⋅∘|⊙◌|⋅∘)
   &p $$ Fetching day _
   Request Year ⊙(Host SessionCookie)
-  ◌ °Response &rs∞⊸&w
+  &rs∞⊸&w
+  ⍣(◌ °Response
+  | °BadResponse
+    &p $$ Unexpected response: _
+    &exit 1
+  )
   &fwa InputFilePath InputsDir Year :
 )
 
