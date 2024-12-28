@@ -1,5 +1,3 @@
-# Experimental!
-
 ~ "aoc.ua" ~ Day Lines Part Share
 
 Day 1
