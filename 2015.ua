@@ -31,14 +31,14 @@ Share ≡°□ Lines
 Part 1 /+ ≡(
   ××⊃(
     >2 /+ ∵(/+ ⌕:"aeiou")
-  | >0 /+ ≡(=⊃(⊡0|⊡1)) ◫2
-  | =0 /+ /+ ≡(/+ ⌕:"ab"_"cd"_"pq"_"xy") ◫2
+  | >0 /+ ≡(=⊃(⊡0|⊡1)) ⧈∘2
+  | =0 /+ /+ ≡(/+ ⌕:"ab"_"cd"_"pq"_"xy") ⧈∘2
   )
 )
 Part 2 /+ ≡(
   ×⊃(
-    >0 /+ ×⊃(¬◰|¬×⊃(⊂1|⊂:1¬) ≡(=⊃(⊡0|⊡1)) ◫2) ⊛ ◫2
-  | >0 /+ ≡(=⊃(⊡0|⊡2)) ◫3
+    >0 /+ ×⊃(¬◰|¬×⊃(⊂1|⊂:1¬) ≡(=⊃(⊡0|⊡1)) ⧈∘2) ⊛ ⧈∘2
+  | >0 /+ ≡(=⊃(⊡0|⊡2)) ⧈∘3
   )
 )
 
@@ -69,10 +69,10 @@ Share ≡(
   | 5{∘}
   ) °Bind
 ) Lines
-NoValue        ← $$ No value
-Value          ← ⍣(⊙◌ ⋕|°□ ⊡[⊙1] ⊗ □ ⊙⊸≡⊢|⍤NoValue 0⋅⋅0)
-Unary          ← Value °{∘}
-Binary         ← ∩Value ⊃(⊙⋅∘|⋅⊙∘) °{⊙∘}
+NoValue ← $$ No value
+Value   ← ⍣(⊙◌ ⋕|°□ ⊡[⊙1] ⊗ □ ⊙⊸≡⊢|⍤NoValue 0⋅⋅0)
+Unary   ← Value °{∘}
+Binary  ← ∩Value ⊃(⊙⋅∘|⋅⊙∘) °{⊙∘}
 WireOutput ← ⊃⋅⋅⊙◌(
   ⨬(-:65535 Unary
   | °⋯ ↧1 +∩(⬚0↙16 ⋯) Binary
@@ -94,12 +94,12 @@ Part 2 Value"a" CircuitOutputs [{"b" ∘}]
 
 Day 8
 Share Lines
-StringLiteral      ← $$ "_"
+StringLiteral ← $$ "_"
 CharactersInMemory ← °0 ∧⍣(
   ⨬(1|0 +1) °@\\
 | ⨬(0 +1|2) °@x
 | ⨬(0 +1|0 +1|3|0 +1) ◌
 ) ⊙(0 0) °StringLiteral
-Escape ← ⍜⊜□(≡⍜°□(/⊂ ∵⊂@\\)) ⊸(∈ "\\\"")
+Escape ← ⍜⊜□(≡⍜°□(/⊂ ∵⊂@\\)) ⊸(∊ "\\\"")
 Part 1 /+ ≡(-⊃CharactersInMemory⧻ °□)
 Part 2 /+ ≡(-⊃CharactersInMemory⧻ StringLiteral Escape °□)
