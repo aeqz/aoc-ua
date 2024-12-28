@@ -3,8 +3,8 @@
 Some Advent of Code solutions implemented with [Uiua](https://www.uiua.org/).
 
 > [!IMPORTANT]  
-> Uiua is not yet stable. This code is compatible with version `0.13.0`.
-> It also makes use of some external commands that are not yet available in Uiua:
+> Uiua is not yet stable. This code is compatible with version `0.14.1`.
+> It also makes use of the following external commands that are not available in Uiua:
 >   * `md5`
 
 ## Download your input files
@@ -22,5 +22,5 @@ Requires having a `.session` file in the current directory with your Advent of C
 uiua watch
 
 # To record outputs for a year
-uiua run [year].ua > [year].out
+uiua run --no-color [year].ua > [year].out
 ```
