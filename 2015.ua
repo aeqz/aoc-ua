@@ -8,8 +8,8 @@ Part 2 +1 ⊗ ¯1 \+
 Day 2
 Present ← $$ _x_x_
 Share ≡(⋕{°Present}) Lines
-Part 1 /+≡(+⊃(/+ ×2 ×⊸(↻2)|/× ↙2⊏⊸⍏))
-Part 2 /+≡(+⊃(/×|/+ ×2 ↙2⊏⊸⍏))
+Part 1 /+≡(+⊃(/+ ×2 ×⊸(↻2)|/× ↙2⍆))
+Part 2 /+≡(+⊃(/×|/+ ×2 ↙2⍆))
 
 Day 3
 Share ⍉ ⊟ ⊃(+⊃(¯⌕@<|⌕@>)|+⊃(¯⌕@v|⌕@^))
@@ -31,14 +31,14 @@ Share ≡°□ Lines
 Part 1 /+ ≡(
   ××⊃(
     >2 /+ ∵(/+ ⌕:"aeiou")
-  | >0 /+ ≡(=⊃(⊡0|⊡1)) ◫2
-  | =0 /+ /+ ≡(/+ ⌕:"ab"_"cd"_"pq"_"xy") ◫2
+  | >0 /+ ⧈₂(=⊃(⊡0|⊡1))
+  | =0 /+ /+ ⧈₂(/+ ⌕:"ab"_"cd"_"pq"_"xy")
   )
 )
 Part 2 /+ ≡(
   ×⊃(
-    >0 /+ ×⊃(¬◰|¬×⊃(⊂1|⊂:1¬) ≡(=⊃(⊡0|⊡1)) ◫2) ⊛ ◫2
-  | >0 /+ ≡(=⊃(⊡0|⊡2)) ◫3
+    >0 /+ ×⊃(¬◰|¬×⊃(⊂1|⊂:1¬) ⧈₂(=⊃(⊡0|⊡1))) ⊛ ⧈₂∘
+  | >0 /+ ⧈₃(=⊃(⊡0|⊡2))
   )
 )
 
@@ -47,7 +47,7 @@ Toggle  ← $$ toggle _,_ through _,_
 TurnOn  ← $$ turn on _,_ through _,_
 TurnOff ← $$ turn off _,_ through _,_
 Share ≡([⊙∩∩⋕] ⍣(0°Toggle|1°TurnOn|2°TurnOff)) Lines
-InstructionTarget ← ☇1 ⊞⊂ ⊃(⍜-⇡ ⊃(⊡1|+ 1 ⊡3)|⍜-⇡ ⊃(⊡2|+ 1 ⊡4))
+InstructionTarget ← ♭₋₁ ⊞⊂ ⊃(⍜-⇡ ⊃(⊡1|+ 1 ⊡3)|⍜-⇡ ⊃(⊡2|+ 1 ⊡4))
 MakeLights!       ← ∧(⍜⊡(^0:) ⊃(⊙⋅∘|⋅⊙◌) ⊃InstructionTarget⊢) : ↯1000_1000 0
 Part 1 /+ ♭ MakeLights!⨬(◿2 +1|↧1 +1|×0)
 Part 2 /+ ♭ MakeLights!⨬(+2|+1|↥0 -1)
@@ -69,10 +69,10 @@ Share ≡(
   | 5{∘}
   ) °Bind
 ) Lines
-NoValue        ← $$ No value
-Value          ← ⍣(⊙◌ ⋕|°□ ⊡[⊙1] ⊗ □ ⊙⊸≡⊢|⍤NoValue 0⋅⋅0)
-Unary          ← Value °{∘}
-Binary         ← ∩Value ⊃(⊙⋅∘|⋅⊙∘) °{⊙∘}
+NoValue ← $$ No value
+Value   ← ⍣(⊙◌ ⋕|°□ ⊡[⊙1] ⊗ □ ⊙⊸≡⊢|⍤NoValue 0⋅⋅0)
+Unary   ← Value °{∘}
+Binary  ← ∩Value ⊃(⊙⋅∘|⋅⊙∘) °{⊙∘}
 WireOutput ← ⊃⋅⋅⊙◌(
   ⨬(-:65535 Unary
   | °⋯ ↧1 +∩(⬚0↙16 ⋯) Binary
@@ -94,12 +94,12 @@ Part 2 Value"a" CircuitOutputs [{"b" ∘}]
 
 Day 8
 Share Lines
-StringLiteral      ← $$ "_"
+StringLiteral ← $$ "_"
 CharactersInMemory ← °0 ∧⍣(
   ⨬(1|0 +1) °@\\
 | ⨬(0 +1|2) °@x
 | ⨬(0 +1|0 +1|3|0 +1) ◌
 ) ⊙(0 0) °StringLiteral
-Escape ← ⍜⊜□(≡⍜°□(/⊂ ∵⊂@\\)) ⊸(∈ "\\\"")
+Escape ← ⍜⊜□(≡⍜°□(/⊂ ∵⊂@\\)) ⊸(∊ "\\\"")
 Part 1 /+ ≡(-⊃CharactersInMemory⧻ °□)
 Part 2 /+ ≡(-⊃CharactersInMemory⧻ StringLiteral Escape °□)

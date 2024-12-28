@@ -1,5 +1,3 @@
-# Experimental!
-
 ~ "aoc.ua" ~ Day Lines Part Share
 
 Day 1
@@ -9,11 +7,11 @@ Part 1 /+⌵ -∩⍆ ⊃(≡⊡₀|≡⊡₁)
 Part 2 /+× ⟜≡(/+⌕) ⊃(≡⊡₀|¤≡⊡₁)
 
 Day 2
-Levels    ← ⊜⋕ ⊸≠@ 
+Levels ← ⊜⋕ ⊸≠@ 
 SafeLevel ← >0 ×+⊃(
   /× = ⊸⊏⊸⍏
 | /× = ⊸⊏⊸⍖
-| /× ×⊃(>0|<4) ⌵≡/-◫2
+| /× ×⊃(>0|<4) ⌵⧈₂/-
 )
 Share ⍚Levels Lines
 Part 1 /+ ⍚SafeLevel
@@ -33,8 +31,8 @@ XmasRows     ← /+ ♭⌕"XMAS"
 XmasDiagonal ← ⍣(1°"XMAS"|0) ⊡[0_0 1_1 2_2 3_3]
 XmasShape    ← ⍣(1°"MSAMS"|1°"SMASM"|1°"SSAMM"|1°"MMASS"|0) ⊡[0_0 0_2 1_1 2_0 2_2]
 Share ≡°□Lines
-Part 1 /+ [∩∩(+⊃(XmasRows|/+ ♭≡≡XmasDiagonal ◫4_4))] ⊸Rotate⊸Rotate⊸Rotate
-Part 2 /+ ♭≡≡XmasShape ◫3_3
+Part 1 /+ [∩∩(+⊃(XmasRows|/+ ♭⧈XmasDiagonal4_4))] ⊸Rotate⊸Rotate⊸Rotate
+Part 2 /+ ♭⧈XmasShape3_3
 
 Day 5
 Ordering        ← $$ _|_
@@ -45,7 +43,7 @@ OrderingUpdates ← $$ _
 MidPage         ← ⊡÷2⊸⧻
 Update          ← ⊜⋕ ⊸≠@,
 SortUpdate      ← ⊏⍖ °⊚⊛⟜◴ ≡⊢
-UpdateOrdering  ← ▽: ⟜≡(¬∈:∞ ⬚∞⊗) ⊙¤
+UpdateOrdering  ← ▽: ⟜≡(¬∊:∞ ⬚∞⊗) ⊙¤
 ≡[∩⋕°Ordering] Lines ⊙(⍚Update Lines) °OrderingUpdates
 ⊸⍚(SortUpdate UpdateOrdering)¤
 °⊟⊕□: ⟜≡◇(¬/× = ↘¯1 :)
